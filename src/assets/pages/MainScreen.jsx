@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import IndexImages from '../assets/images/images';
+import IndexImages from '../images/images';
 import { Link } from 'react-router-dom';
 
 function MainScreen() {
@@ -51,7 +51,7 @@ function MainScreen() {
         </button>
         {dropdownOpen && (
           <div className="dropdown-menu">
-            <div className="dropdown-item" onClick={() => handleOptionClick("Option 1")}>
+            <div className="dropdown-item" onClick={() => handleOptionClick("Today")}>
             <label>
           <input
             type="checkbox"
@@ -60,7 +60,7 @@ function MainScreen() {
           Today
         </label>
             </div>
-            <div className="dropdown-item" onClick={() => handleOptionClick("Option 2")}>
+            <div className="dropdown-item" onClick={() => handleOptionClick("This week")}>
             <label>
           <input
             type="checkbox"
@@ -69,20 +69,20 @@ function MainScreen() {
           This week
         </label>
             </div>
-            <div className="dropdown-item" onClick={() => handleOptionClick("Option 3")}>
+            <div className="dropdown-item" onClick={() => handleOptionClick("This weekend")}>
             <label>
           <input
             type="checkbox"
-            name="This week"
+            name="This weekend"
           />
           This weekend
         </label>
             </div>
-            <div className="dropdown-item" onClick={() => handleOptionClick("Option 4")}>
+            <div className="dropdown-item" onClick={() => handleOptionClick("Next 30 days")}>
             <label>
           <input
             type="checkbox"
-            name="This week"
+            name="Next 30 days"
           />
           Next 30 days
         </label>
@@ -93,51 +93,58 @@ function MainScreen() {
       </div>
       <div className='music-type'>
         <div className='type'>
-        <Link to='/'>Hip Hop</Link>
+          <label><input type='checkbox'></input>Hip Hop</label>
         </div>
         <div className='type'>
-        <Link to='/'>Electronic</Link>
+        <label><input type='checkbox'></input>Electronic</label>
         </div>
         <div className='type'>
-        <Link to='/'>Rock</Link>
+        <label><input type='checkbox'></input>Rock</label>
         </div>
         <div className='type'>
-        <Link to='/'>Regueaton</Link>
+        <label><input type='checkbox'></input>Regueaton</label>
         </div>
         <div className='type'>
-        <Link to='/'>Trap</Link>
+        <label><input type='checkbox'></input>Trap</label>
         </div>
         <div className='type'>
-        <Link to='/'>Latin Trap</Link>
+        <label><input type='checkbox'></input>Latin Trap</label>
         </div>
         <div className='type'>
-        <Link to='/'>Salsa</Link>
+        <label><input type='checkbox'></input>Salsa</label>
         </div>
         <div className='type'>
-        <Link to='/'>Bachata</Link>
+        <label><input type='checkbox'></input>Bachata</label>
         </div>
         <div className='type'>
-        <Link to='/'>Merengue</Link>
+        <label><input type='checkbox'></input>Merengue</label>
         </div>
         <div className='type'>
-        <Link to='/'>Jazz</Link>
+        <label><input type='checkbox'></input>Jazz</label>
         </div>
         <div className='type'>
-        <Link to='/'>Piano</Link>
+        <label><input type='checkbox'></input>Piano</label>
         </div>
         <div className='type'>
-        <Link to='/'>Solo Music</Link>
+        <label><input type='checkbox'></input>Solo Music</label>
         </div>
         <div className='type'>
-        <Link to='/'>Stand Up Comedy</Link>
+        <label><input type='checkbox'></input>Stand Up Comedy</label>
         </div>
         <div className='type'>
-        <Link to='/'>Pop</Link>
+        <label><input type='checkbox'></input>Pop</label>
         </div>
       </div>
       <div className='buttons'>
-            <Link to='/'>Clear Filter</Link>
-            <Link to='/'>Submit</Link>
+            <button>Clear Filter</button>
+            <Link to="/eventlist">
+            <button>Submit</button>
+            </Link>
+        </div>
+        <div className='events'>
+        <div className='cstm-event'>
+          
+        </div>
         </div>
       </div>}
       </div>

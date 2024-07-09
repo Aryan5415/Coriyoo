@@ -2,21 +2,17 @@ import './App.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from './component/shared/Header';
 import Footer from './component/shared/Footer';
-import MainScreen from './pages/MainScreen';
+import MainScreen from './assets/pages/MainScreen';
+import EventList from './assets/pages/EventList';
 
 function App() {
   return (
     <>
       <BrowserRouter>
       <Header />
-      <MainScreen />
       <Routes>
-        {/* <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="blogs" element={<Blogs />} />
-          <Route path="contact" element={<Contact />} />
-          <Route path="*" element={<NoPage />} />
-        </Route> */}
+        <Route path="/" element={<MainScreen />} />
+        <Route path="/eventlist" element={<EventList/>} />
       </Routes>
       <Footer />
     </BrowserRouter>
